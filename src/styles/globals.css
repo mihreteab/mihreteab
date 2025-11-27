@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import "./utilities.css";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -8,8 +10,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-poppins);
-  --font-poppins: var(--font-poppins);
+  --font-sans: var(--font-outfit);
+  --font-poppins: var(--font-outfit);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +22,5 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-poppins), sans-serif;
+  font-family: var(--font-outfit), sans-serif;
 }

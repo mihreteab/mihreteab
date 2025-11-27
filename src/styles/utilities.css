@@ -1,0 +1,47 @@
+@layer utilities {
+  .heading-bold {
+    font-weight: 900;
+    line-height: 72px;
+    font-size: 60px;
+    letter-spacing: -2%;
+  }
+  .heading-bold-mob {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -2%;
+  }
+  .heading-h3-bold {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    letter-spacing: -2%;
+  }
+  .heading-semi-bold {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    letter-spacing: 0%;
+  }
+  .body2-normal {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+  }
+  .body2-medium {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+  }
+  .body3-medium {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    font-weight: 500;
+  }
+  .subtitle-normal {
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0%;
+  }
+}
