@@ -9,7 +9,7 @@ const Experience = () => {
           <div className="flex justify-center">
             <Tag>Experience</Tag>
           </div>
-          <div className="text-cente">
+          <div className="text-center">
             Here is a quick summary of my most recent experiences:
           </div>
         </div>

@@ -6,6 +6,8 @@ import XIcon from "@/components/atoms/xIcon";
 import MobileMenu from "@/components/molecuels/mobileMenu";
 import AboutMe from "@/components/organisms/aboutMe";
 import Experience from "@/components/organisms/experience";
+import Footer from "@/components/organisms/footer";
+import GetInTouch from "@/components/organisms/getInTouch";
 import Skills from "@/components/organisms/skills";
 import Testimonials from "@/components/organisms/testimonials";
 import Works from "@/components/organisms/works";
@@ -98,6 +100,8 @@ export default function Home() {
       <Experience />
       <Works />
       <Testimonials />
+      <GetInTouch />
+      <Footer />
     </main>
   );
 }

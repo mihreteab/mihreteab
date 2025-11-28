@@ -5,7 +5,7 @@ import { cn } from "@/libs/utils";
 
 const WorkCard = ({ picRight }: { picRight?: boolean }) => {
   return (
-    <div className="rounded-[12px] bg drop-shadow-md bg-[#ffffff] md:flex">
+    <div className="rounded-[12px] drop-shadow-md bg-[#ffffff] md:flex">
       <div
         className={cn(
           "bg-gray-50 p-8 flex justify-center items-center border border-gray-100 md:p-[48px] flex-1 rounded-t-[12px] md:rounded-t-none md:rounded-l-[12px]",
