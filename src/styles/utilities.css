@@ -33,6 +33,11 @@
     line-height: 24px;
     font-weight: 500;
   }
+  .body3-normal {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+  }
   .body3-medium {
     font-size: 14px;
     line-height: 20px;
