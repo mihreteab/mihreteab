@@ -7,6 +7,7 @@ import MobileMenu from "@/components/molecuels/mobileMenu";
 import AboutMe from "@/components/organisms/aboutMe";
 import Experience from "@/components/organisms/experience";
 import Skills from "@/components/organisms/skills";
+import Works from "@/components/organisms/works";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -94,6 +95,7 @@ export default function Home() {
       <AboutMe />
       <Skills />
       <Experience />
+      <Works />
     </main>
   );
 }
