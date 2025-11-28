@@ -44,4 +44,16 @@
     line-height: 28px;
     letter-spacing: 0%;
   }
+  .subtitle-semi-bold-tab {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    letter-spacing: 0%;
+  }
+  .subtitle-semi-bold-desk {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    letter-spacing: 0%;
+  }
 }

@@ -5,6 +5,7 @@ import LocationIcon from "@/components/atoms/locationIcon";
 import XIcon from "@/components/atoms/xIcon";
 import MobileMenu from "@/components/molecuels/mobileMenu";
 import AboutMe from "@/components/organisms/aboutMe";
+import Experience from "@/components/organisms/experience";
 import Skills from "@/components/organisms/skills";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,7 +64,7 @@ export default function Home() {
                   <div className="body2-normal">Available for new projects</div>
                 </div>
               </div>
-              <div className="flex gap">
+              <div className="flex">
                 <button>
                   <GithubIcon />
                 </button>
@@ -92,6 +93,7 @@ export default function Home() {
       </div>
       <AboutMe />
       <Skills />
+      <Experience />
     </main>
   );
 }
