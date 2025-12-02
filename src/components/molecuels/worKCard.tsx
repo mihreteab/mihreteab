@@ -5,10 +5,10 @@ import { cn } from "@/libs/utils";
 
 const WorkCard = ({ picRight }: { picRight?: boolean }) => {
   return (
-    <div className="rounded-[12px] drop-shadow-md bg-[#ffffff] md:flex">
+    <div className="rounded-[12px] drop-shadow-md bg-[#ffffff] dark:bg-[#1F2937] md:flex">
       <div
         className={cn(
-          "bg-gray-50 p-8 flex justify-center items-center border border-gray-100 md:p-[48px] flex-1 rounded-t-[12px] md:rounded-t-none md:rounded-l-[12px]",
+          "bg-secondary-background dark:bg-[#374151] p-8 flex justify-center items-center border border-gray-100 dark:border-[#1F2937] md:p-[48px] flex-1 rounded-t-[12px] md:rounded-t-none md:rounded-l-[12px]",
           picRight && "md:order-last md:rounded-l-none md:rounded-r-[12px]"
         )}
       >
@@ -21,10 +21,10 @@ const WorkCard = ({ picRight }: { picRight?: boolean }) => {
         />
       </div>
       <div className="flex flex-col gap-6 p-8 flex-1 md:p-[48px]">
-        <div className="subtitle-semi-bold-tab md:subtitle-semi-bold-desk">
+        <div className="subtitle-semi-bold-tab md:subtitle-semi-bold-desk text-foreground">
           Fiskil
         </div>
-        <div className="body2-normal">
+        <div className="body2-normal text-secondary-foreground">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec
           urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in
           faucibus orci luctus et ultrices posuere cubilia curae.
@@ -42,7 +42,7 @@ const WorkCard = ({ picRight }: { picRight?: boolean }) => {
           <TechTag stack="Git" />
         </div>
         <div>
-          <button className="h-9 w-9 flex justify-center items-center">
+          <button className="h-9 w-9 flex justify-center items-center text-secondary-foreground">
             <OpenIcon />
           </button>
         </div>

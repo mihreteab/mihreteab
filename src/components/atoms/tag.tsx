@@ -11,7 +11,7 @@ const Tag = ({ content, children, styling }: TagProps) => {
   return (
     <div
       className={cn(
-        "bg-gray-200 text-gray-600 rounded-[12px] px-5 py-1",
+        "bg-gray-200 dark:bg-[#374151] text-secondary-foreground rounded-[12px] px-5 py-1",
         styling
       )}
     >

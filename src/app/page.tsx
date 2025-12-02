@@ -1,9 +1,9 @@
 import GithubIcon from "@/components/atoms/githubIcon";
-import LightModeIcon from "@/components/atoms/lightModeIcon";
 import LinkedInIcon from "@/components/atoms/linkedInIcon";
 import LocationIcon from "@/components/atoms/locationIcon";
 import XIcon from "@/components/atoms/xIcon";
 import MobileMenu from "@/components/molecuels/mobileMenu";
+import ThemeToggle from "@/components/molecuels/ThemeToggle";
 import AboutMe from "@/components/organisms/aboutMe";
 import Experience from "@/components/organisms/experience";
 import Footer from "@/components/organisms/footer";
@@ -21,19 +21,18 @@ export default function Home() {
       <div>
         <div className="md:px-[80px]">
           <div className="flex justify-between p-4 items-center md:px-[32px]">
-            <div className="heading-bold-mob">{"<SS/>"}</div>
+            <div className="heading-bold-mob text-foreground">{"<SS/>"}</div>
             <MobileMenu />
-            <div className="hidden md:flex gap-[24px] items-center text-gray-600 body2-medium">
-              <Link href="#">About</Link>
+            <div className="hidden md:flex gap-[24px] items-center body2-medium text-secondary-foreground">
+              <Link href="#" className="text-secondary-foreground">
+                About
+              </Link>
               <Link href="#">Work</Link>
               <Link href="#">Testimonial</Link>
               <Link href="#">Contact</Link>
-              <div></div>
               <div className="flex gap-4">
-                <button className="flex justify-center p-[6px] rounded-[8px] h-[36px] w-[36px]">
-                  <LightModeIcon />
-                </button>
-                <button className="px-4 py-[6px] bg-gray-900 text-gray-50 rounded-[12px]">
+                <ThemeToggle />
+                <button className="px-4 py-[6px] bg-foreground text-secondary-background rounded-[12px]">
                   Download CV
                 </button>
               </div>
@@ -44,10 +43,10 @@ export default function Home() {
           <div className="flex flex-col-reverse md:flex-row md:px-[32px] gap-[48px]">
             <div className="flex flex-col gap-[48px]">
               <div className="flex flex-col gap-2">
-                <div className="heading-semi-bold md:heading-bold text-gray-900">
+                <div className="heading-semi-bold md:heading-bold text-foreground">
                   Hi, I’m Mihreteab 👋
                 </div>
-                <div className="body2-normal">
+                <div className="body2-normal text-gray-600 dark:text-[#D1D5DB]">
                   I&apos;m a full stack developer (React.js & Node.js) with a
                   focus on creating (and occasionally designing) exceptional
                   digital experiences that are fast, accessible, visually
@@ -56,7 +55,7 @@ export default function Home() {
                   was something new.
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 text-gray-600 dark:text-[#D1D5DB]">
                 <div className="flex gap-2">
                   <LocationIcon />
                   <div className="body2-normal">Ahmedabad, India</div>
@@ -68,7 +67,7 @@ export default function Home() {
                   <div className="body2-normal">Available for new projects</div>
                 </div>
               </div>
-              <div className="flex">
+              <div className="flex text-gray-600 dark:text-[#D1D5DB]">
                 <button>
                   <GithubIcon />
                 </button>
@@ -82,7 +81,7 @@ export default function Home() {
             </div>
             <div className="md:w-[400px] shrink-0 flex justify-center md:justify-end">
               <div className="relative flex justify-center md:block h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
-                <div className="absolute bottom-[10px] md:bottom-0 right-[10px] md:right-0 left-[10px] md:left-[40px] h-[260px] w-[260px] md:h-[320px] md:w-[280px] bg-gray-200 z-[-1]"></div>
+                <div className="absolute bottom-[10px] md:bottom-0 right-[10px] md:right-0 left-[10px] md:left-[40px] h-[260px] w-[260px] md:h-[320px] md:w-[280px] bg-gray-200 dark:bg-[#374151] z-[-1]"></div>
                 <Image
                   height={280}
                   width={240}

@@ -1,7 +1,11 @@
 import React from "react";
 import { IconProps } from "@/libs";
 
-const XIcon: React.FC<IconProps> = ({ height = "36", width = "36" }) => {
+const XIcon: React.FC<IconProps> = ({
+  height = "36",
+  width = "36",
+  color = "currentColor",
+}) => {
   return (
     <svg
       width={width}
@@ -12,7 +16,7 @@ const XIcon: React.FC<IconProps> = ({ height = "36", width = "36" }) => {
     >
       <path
         d="M28 9.99999C28 9.99999 27.3 12.1 26 13.4C27.6 23.4 16.6 30.7 8 25C10.2 25.1 12.4 24.4 14 23C9 21.5 6.5 15.6 9 11C11.2 13.6 14.6 15.1 18 15C17.1 10.8 22 8.39999 25 11.2C26.1 11.2 28 9.99999 28 9.99999Z"
-        stroke="#4B5563"
+        stroke={color}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
