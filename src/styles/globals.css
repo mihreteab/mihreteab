@@ -1,24 +1,34 @@
 @import "tailwindcss";
 
+/* Make Tailwind's `dark:` variant respond to the `.dark` class (from next-themes) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @import "./utilities.css";
 
 :root {
+  /* Light theme (default) */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827; /*gray-900*/
+  --secondary-background: #f9fafb; /* gray-50 */
+  --secondary-foreground: #4b5563;
 }
 
+/* Map CSS variables into Tailwind tokens */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-outfit);
   --font-poppins: var(--font-outfit);
+  --color-secondary-background: var(--secondary-background);
+  --color-secondary-foreground: var(--secondary-foreground);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Dark theme values – activated when `next-themes` adds `class="dark"` on <html> */
+.dark {
+  --background: #030712;
+  --foreground: #f9fafb;
+  --secondary-background: #111827;
+  --secondary-foreground: #d1d5db;
 }
 
 body {

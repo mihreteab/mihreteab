@@ -29,6 +29,12 @@
     line-height: 32px;
     letter-spacing: -2%;
   }
+  .heading-h3-semi-bold {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -2%;
+    font-weight: 600;
+  }
   .heading-semi-bold {
     font-weight: 600;
     font-size: 36px;

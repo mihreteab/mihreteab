@@ -2,7 +2,7 @@ import CopyRightIcon from "../atoms/copyRightIcon";
 
 const Footer = () => {
   return (
-    <footer className="py-6 flex justify-center items-center gap-2">
+    <footer className="py-6 flex justify-center items-center gap-2 text-secondary-foreground">
       <CopyRightIcon />
       <span className="body3-normal">
         2025 | Designed and coded with ❤️️ by Mihreteab D

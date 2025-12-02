@@ -8,7 +8,7 @@ import XIcon from "../atoms/xIcon";
 
 const GetInTouch = () => {
   return (
-    <div className="px-4 py-16 md:px-20 md:py-24">
+    <div className="px-4 py-16 md:px-20 md:py-24 text-secondary-foreground">
       <div className="flex flex-col gap-6 md:px-8 md:gap-12">
         <div className="flex flex-col gap-4 items-center">
           <Tag>Get in touch</Tag>
@@ -23,7 +23,7 @@ const GetInTouch = () => {
             <button className="md:p-1.5">
               <MailIcon className="md:h-8 md:w-8" />
             </button>
-            <div className="heading-h2-semi-bold-tab md:heading-h2-semi-bold-desk">
+            <div className="heading-h2-semi-bold-tab md:heading-h2-semi-bold-desk text-foreground">
               mihreteabdemeke@gmail.com
             </div>
             <button className="md:p-1.5">
@@ -34,7 +34,7 @@ const GetInTouch = () => {
             <button className="md:p-1.5">
               <PhoneIcon className="md:h-8 md:w-8" />
             </button>
-            <div className="heading-h2-semi-bold-tab md:heading-h2-semi-bold-desk">
+            <div className="heading-h2-semi-bold-tab md:heading-h2-semi-bold-desk text-foreground">
               +2519 1635 3625
             </div>
             <button className="md:p-[6px]">

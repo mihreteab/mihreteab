@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import MenuIcon from "../atoms/menuIcon";
 import CloseIcon from "../atoms/closeIcon";
-import LightModeIcon from "../atoms/lightModeIcon";
+import ThemeToggle from "./ThemeToggle";
 
 const MobileMenu = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -38,21 +38,21 @@ const MobileMenu = () => {
         <div className="h-screen absolute inset-0 bg-[#ffffff] z-1">
           <div
             onClick={handleCloseMenu}
-            className="absolute flex justify-end inset-0 bg-gray-900/[.1] backdrop-blur-2xl overflow-hidden"
+            className="absolute flex justify-end inset-0 bg-foreground/[.1] dark:bg-[#F9FAFB]/[.1] backdrop-blur-2xl overflow-hidden"
           >
             <div
-              className="w-[80%] bg-[#ffffff]"
+              className="w-[80%] bg-[#ffffff] dark:bg-[#030712]"
               onClick={(e) => {
                 e.stopPropagation();
               }}
             >
               <div className="p-4 flex justify-between">
-                <div className="heading-h3-bold">{"<SS/>"}</div>
+                <div className="heading-h3-bold text-foreground">{"<SS/>"}</div>
                 <button onClick={handleCloseMenu}>
                   <CloseIcon />
                 </button>
               </div>
-              <div className="flex flex-col p-4 gap-4 border-t border-b border-gray-100 text-left body2-medium">
+              <div className="flex flex-col p-4 gap-4 border-t border-b border-gray-100 dark:border-[#1F2937] text-left body2-medium text-secondary-foreground">
                 <div>About</div>
                 <div>Work</div>
                 <div>Testimonials</div>
@@ -61,14 +61,10 @@ const MobileMenu = () => {
               <div className="flex flex-col p-4 gap-4">
                 <div className="flex justify-between items-center">
                   <div>Switch Theme</div>
-                  <div>
-                    <button>
-                      <LightModeIcon />
-                    </button>
-                  </div>
+                  <ThemeToggle />
                 </div>
                 <div>
-                  <button className="py-[6px] px-4 bg-gray-900 text-gray-50 rounded-[12px] w-full body2-medium">
+                  <button className="py-[6px] px-4 bg-foreground text-secondary-background rounded-[12px] w-full body2-medium">
                     Download CV
                   </button>
                 </div>

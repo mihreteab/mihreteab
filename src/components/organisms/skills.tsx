@@ -24,11 +24,11 @@ const Skills = () => {
           <div className="flex justify-center">
             <Tag content="Skills" />
           </div>
-          <div className="text-center text-gray-600">
+          <div className="text-center text-secondary-foreground">
             The skills, tools and technologies I am really good at:
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 md:grid-cols-5 lg:grid-cols-8">
+        <div className="grid grid-cols-3 gap-4 md:grid-cols-5 lg:grid-cols-8 text-secondary-foreground">
           <div className="flex flex-col gap-2 items-center">
             <div>
               <JavascriptIcon />

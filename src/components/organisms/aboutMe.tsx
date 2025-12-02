@@ -4,7 +4,7 @@ import Tag from "../atoms/tag";
 
 const AboutMe = () => {
   return (
-    <div className="bg-gray-50 py-[64px] px-4 md:px-[80px] md:py-[96px]">
+    <div className="bg-secondary-background py-[64px] px-4 md:px-[80px] md:py-[96px]">
       <div className="flex flex-col gap-6 md:px-8">
         <div className="flex justify-center">
           <Tag>About me</Tag>
@@ -24,8 +24,10 @@ const AboutMe = () => {
               />
             </div>
           </div>
-          <div className="flex flex-col gap-6 flex-1">
-            <div>Curious about me? Here you have it:</div>
+          <div className="flex flex-col gap-6 flex-1 text-secondary-foreground body2-normal">
+            <div className="text-foreground heading-h3-semi-bold">
+              Curious about me? Here you have it:
+            </div>
             <div className="flex flex-col gap-4">
               <div>
                 I&apos;m a passionate, self-proclaimed designer who specializes
@@ -59,21 +61,21 @@ const AboutMe = () => {
               <div className="flex gap-[10px]">
                 <div className="flex flex-col gap-[10px]">
                   <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-gray-600"></div>
+                    <div className="h-1 w-1 rounded-full bg-secondary-foreground"></div>
                     <div>B.E. in Software Engineering</div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-gray-600"></div>
+                    <div className="h-1 w-1 rounded-full bg-secondary-foreground"></div>
                     <div>Full time freelancer</div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-[10px]">
                   <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-gray-600"></div>
+                    <div className="h-1 w-1 rounded-full bg-secondary-foreground"></div>
                     <div>Avid learner</div>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-1 w-1 rounded-full bg-gray-600"></div>
+                    <div className="h-1 w-1 rounded-full bg-secondary-foreground"></div>
                     <div>Aspiring indie hacker</div>
                   </div>
                 </div>
