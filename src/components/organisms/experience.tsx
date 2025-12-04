@@ -1,50 +1,12 @@
 import Tag from "../atoms/tag";
 import ExperienceCard from "../molecuels/ExperienceCard";
+import type { Experience as ExperienceType } from "@/libs/types";
 
-const Experience = () => {
-  const experiences = [
-    {
-      title: "Sr. Frontend Developer",
-      time: "Nov 2021 - Present",
-      activities: [
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      ],
-    },
-    {
-      title: "Sr. Frontend Developer",
-      time: "Nov 2021 - Present",
-      activities: [
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      ],
-    },
-    {
-      title: "Sr. Frontend Developer",
-      time: "Nov 2021 - Present",
-      activities: [
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      ],
-    },
-    {
-      title: "Sr. Frontend Developer",
-      time: "Nov 2021 - Present",
-      activities: [
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        " Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      ],
-    },
-  ];
+type ExperienceProps = {
+  data: ExperienceType[];
+};
 
+const Experience = ({ data }: ExperienceProps) => {
   return (
     <div
       id="experience"
@@ -59,7 +21,7 @@ const Experience = () => {
             Here is a quick summary of my most recent experiences:
           </div>
         </div>
-        {experiences.map((experience, index) => (
+        {data.map((experience, index) => (
           <ExperienceCard experience={experience} key={index} />
         ))}
       </div>

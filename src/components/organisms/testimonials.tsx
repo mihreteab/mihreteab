@@ -1,7 +1,12 @@
 import Tag from "../atoms/tag";
 import TestimonialCard from "../molecuels/testimonialCard";
+import type { Testimonial as TestimonialType } from "@/libs/types";
 
-const Testimonials = () => {
+type TestimonialsProps = {
+  data: TestimonialType[];
+};
+
+const Testimonials = ({ data }: TestimonialsProps) => {
   return (
     <div
       id="testimonials"
@@ -15,9 +20,9 @@ const Testimonials = () => {
           </div>
         </div>
         <div className="flex flex-col gap-6 rounded-[12px] md:flex-row md:gap-12">
-          <TestimonialCard />
-          <TestimonialCard />
-          <TestimonialCard />
+          {data.map((testimonial, index) => (
+            <TestimonialCard key={index} testimonial={testimonial} />
+          ))}
         </div>
       </div>
     </div>
