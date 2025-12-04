@@ -3,7 +3,10 @@ import TestimonialCard from "../molecuels/testimonialCard";
 
 const Testimonials = () => {
   return (
-    <div className="px-4 py-16 bg-secondary-background md:px-[80px] md:py-[96px]">
+    <div
+      id="testimonials"
+      className="px-4 py-16 bg-secondary-background md:px-[80px] md:py-[96px]"
+    >
       <div className="flex flex-col gap-6 md:px-8 md:gap-12">
         <div className="flex flex-col gap-4 items-center">
           <Tag>Testimonials</Tag>

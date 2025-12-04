@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
 const XIcon: React.FC<IconProps> = ({
   height = "36",

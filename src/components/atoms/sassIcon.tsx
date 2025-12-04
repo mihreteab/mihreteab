@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
 const SassIcon: React.FC<IconProps> = ({ height = "64", width = "64" }) => {
   return (

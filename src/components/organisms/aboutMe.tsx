@@ -4,7 +4,10 @@ import Tag from "../atoms/tag";
 
 const AboutMe = () => {
   return (
-    <div className="bg-secondary-background py-[64px] px-4 md:px-[80px] md:py-[96px]">
+    <div
+      id="about"
+      className="bg-secondary-background py-[64px] px-4 md:px-[80px] md:py-[96px]"
+    >
       <div className="flex flex-col gap-6 md:px-8">
         <div className="flex justify-center">
           <Tag>About me</Tag>
@@ -13,13 +16,13 @@ const AboutMe = () => {
           <div className="flex justify-center flex-1">
             <div className="relative flex justify-center">
               <div className="absolute w-[320px] h-[360px] md:w-[400px] md:h-[480px] p-2 top-[20px] md:top-[40px] md:right-[40px]">
-                <div className="bg-gray-200 h-full w-full"></div>
+                <div className="bg-gray-200 dark:bg-[#374151] h-[360px] md:h-[480px] w-full rounded-[12px]"></div>
               </div>
               <Image
                 width={280}
                 height={360}
-                src="/images/Pic.png"
-                className="z-1 md:w-[400px] md:h-[480px]"
+                src="/images/pic.jpg"
+                className="z-1 md:w-[400px] md:h-[480px] object-cover rounded-[12px]"
                 alt="About picture"
               />
             </div>

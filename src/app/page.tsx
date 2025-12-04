@@ -2,6 +2,7 @@ import GithubIcon from "@/components/atoms/githubIcon";
 import LinkedInIcon from "@/components/atoms/linkedInIcon";
 import LocationIcon from "@/components/atoms/locationIcon";
 import XIcon from "@/components/atoms/xIcon";
+import DownloadButton from "@/components/molecuels/downloadButton";
 import MobileMenu from "@/components/molecuels/mobileMenu";
 import ThemeToggle from "@/components/molecuels/ThemeToggle";
 import AboutMe from "@/components/organisms/aboutMe";
@@ -19,27 +20,25 @@ export default function Home() {
     <main>
       {/* header */}
       <div>
-        <div className="md:px-[80px]">
+        <div className="fixed  left-0 right-0 z-10 md:px-[80px] backdrop-blur-2xl">
           <div className="flex justify-between p-4 items-center md:px-[32px]">
-            <div className="heading-bold-mob text-foreground">{"<SS/>"}</div>
+            <div className="heading-bold-mob text-foreground">{"<MD/>"}</div>
             <MobileMenu />
             <div className="hidden md:flex gap-[24px] items-center body2-medium text-secondary-foreground">
-              <Link href="#" className="text-secondary-foreground">
+              <Link href="#about" className="text-secondary-foreground">
                 About
               </Link>
-              <Link href="#">Work</Link>
-              <Link href="#">Testimonial</Link>
-              <Link href="#">Contact</Link>
+              <Link href="#works">Work</Link>
+              <Link href="#testimonials">Testimonial</Link>
+              <Link href="#contact">Contact</Link>
               <div className="flex gap-4">
                 <ThemeToggle />
-                <button className="px-4 py-[6px] bg-foreground text-secondary-background rounded-[12px]">
-                  Download CV
-                </button>
+                <DownloadButton />
               </div>
             </div>
           </div>
         </div>
-        <div className="px-4 py-[64px] md:px-[80px] md:py-[96px]">
+        <div className="px-4 py-[132px] md:px-[80px] md:py-[164px]">
           <div className="flex flex-col-reverse md:flex-row md:px-[32px] gap-[48px]">
             <div className="flex flex-col gap-[48px]">
               <div className="flex flex-col gap-2">
@@ -58,7 +57,7 @@ export default function Home() {
               <div className="flex flex-col gap-2 text-gray-600 dark:text-[#D1D5DB]">
                 <div className="flex gap-2">
                   <LocationIcon />
-                  <div className="body2-normal">Ahmedabad, India</div>
+                  <div className="body2-normal">Addis Ababa, Ethiopia</div>
                 </div>
                 <div className="flex gap-2">
                   <div className="flex justify-center items-center h-6 w-6">
@@ -68,26 +67,26 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex text-gray-600 dark:text-[#D1D5DB]">
-                <button>
+                <Link href="https://github.com/mihreteab">
                   <GithubIcon />
-                </button>
-                <button>
+                </Link>
+                <Link href="https://x.com/mihreteab_d">
                   <XIcon />
-                </button>
-                <button>
+                </Link>
+                <Link href="https://www.linkedin.com/in/mihreteab-demeke-46a718140/">
                   <LinkedInIcon />
-                </button>
+                </Link>
               </div>
             </div>
             <div className="md:w-[400px] shrink-0 flex justify-center md:justify-end">
               <div className="relative flex justify-center md:block h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
-                <div className="absolute bottom-[10px] md:bottom-0 right-[10px] md:right-0 left-[10px] md:left-[40px] h-[260px] w-[260px] md:h-[320px] md:w-[280px] bg-gray-200 dark:bg-[#374151] z-[-1]"></div>
+                <div className="absolute bottom-[10px] md:bottom-0 right-[10px] md:right-0 left-[10px] md:left-[40px] h-[260px] w-[260px] md:h-[320px] md:w-[280px] bg-gray-200 dark:bg-[#374151] z-[-1] rounded-[12px]"></div>
                 <Image
                   height={280}
                   width={240}
                   alt="profile"
-                  src="/images/profile.png"
-                  className="h-[280px] w-[240px] md:h-[320px] md:w-[280px]"
+                  src="/images/profile.jpg"
+                  className="h-[280px] w-[240px] md:h-[320px] md:w-[280px] object-cover rounded-[12px]"
                 />
               </div>
             </div>

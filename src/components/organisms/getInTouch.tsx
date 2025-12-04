@@ -8,7 +8,10 @@ import XIcon from "../atoms/xIcon";
 
 const GetInTouch = () => {
   return (
-    <div className="px-4 py-16 md:px-20 md:py-24 text-secondary-foreground">
+    <div
+      id="contact"
+      className="px-4 py-16 md:px-20 md:py-24 text-secondary-foreground"
+    >
       <div className="flex flex-col gap-6 md:px-8 md:gap-12">
         <div className="flex flex-col gap-4 items-center">
           <Tag>Get in touch</Tag>

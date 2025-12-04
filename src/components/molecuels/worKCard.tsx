@@ -2,8 +2,15 @@ import Image from "next/image";
 import TechTag from "./techTag";
 import OpenIcon from "../atoms/openIcon";
 import { cn } from "@/libs/utils";
+import Link from "next/link";
+import { Work } from "@/libs/types";
 
-const WorkCard = ({ picRight }: { picRight?: boolean }) => {
+export type WorkCardProps = {
+  picRight?: boolean;
+  work: Work;
+};
+
+const WorkCard = ({ picRight, work }: WorkCardProps) => {
   return (
     <div className="rounded-[12px] drop-shadow-md bg-[#ffffff] dark:bg-[#1F2937] md:flex">
       <div
@@ -15,36 +22,31 @@ const WorkCard = ({ picRight }: { picRight?: boolean }) => {
         <Image
           width={279}
           height={192}
-          src="/images/work.png"
+          src={work.picture}
           alt="work image"
-          className="object-cover drop-shadow-lg w-full"
+          className="object-cover drop-shadow-lg w-full rounded-[12px]"
         />
       </div>
       <div className="flex flex-col gap-6 p-8 flex-1 md:p-[48px]">
         <div className="subtitle-semi-bold-tab md:subtitle-semi-bold-desk text-foreground">
-          Fiskil
+          {work.title}
         </div>
         <div className="body2-normal text-secondary-foreground">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec
-          urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in
-          faucibus orci luctus et ultrices posuere cubilia curae.
+          {work.description}
         </div>
         <div className="flex gap-2 flex-wrap">
-          <TechTag stack="React" />
-          <TechTag stack="Next.js" />
-          <TechTag stack="Typescript" />
-          <TechTag stack="Nest.js" />
-          <TechTag stack="PostgreSQL" />
-          <TechTag stack="Tailwindcss" />
-          <TechTag stack="Figma" />
-          <TechTag stack="Cypress" />
-          <TechTag stack="Storybook" />
-          <TechTag stack="Git" />
+          {work?.techStacks?.map((teckStack, index) => (
+            <TechTag stack={teckStack} key={index} />
+          ))}
         </div>
         <div>
-          <button className="h-9 w-9 flex justify-center items-center text-secondary-foreground">
+          <Link
+            target="_blank"
+            href={work.url}
+            className="h-9 w-9 flex justify-center items-center text-secondary-foreground"
+          >
             <OpenIcon />
-          </button>
+          </Link>
         </div>
       </div>
     </div>

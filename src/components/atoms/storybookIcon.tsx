@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
 const StorybookIcon: React.FC<IconProps> = ({
   height = "64",

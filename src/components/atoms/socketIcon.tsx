@@ -1,7 +1,11 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
-const SocketIcon: React.FC<IconProps> = ({ height = "64", width = "67" }) => {
+const SocketIcon: React.FC<IconProps> = ({
+  height = "64",
+  width = "67",
+  color = "currentColor",
+}) => {
   return (
     <svg
       width={width}
@@ -13,7 +17,7 @@ const SocketIcon: React.FC<IconProps> = ({ height = "64", width = "67" }) => {
       <g clipPath="url(#clip0_1_864)">
         <path
           d="M63.988 31.295C63.814 20.595 57.848 10.177 48.618 4.69099C41.346 0.161987 32.16 -1.05701 23.886 1.03299C11.433 4.16799 1.505 15.446 0.243003 28.3C-1.325 40.44 4.815 53.066 15.308 59.292C25.584 65.736 39.561 65.475 49.608 58.692C58.665 52.814 64.282 42.092 63.978 31.304L63.988 31.295ZM33.77 59.25C19.227 60.687 5.163 48.365 4.77 33.778C3.67 21.935 11.475 10.222 22.622 6.30299C38.254 0.0329871 57.456 11.615 59.067 28.38C61.593 43.444 49.053 58.78 33.77 59.25ZM24.2 30.38L45.23 13.18L33.866 30.423C30.644 30.423 27.422 30.424 24.2 30.38ZM30.113 33.56L39.779 33.604L18.749 50.847L30.113 33.56Z"
-          fill="#010101"
+          fill={color}
         />
       </g>
       <defs>
