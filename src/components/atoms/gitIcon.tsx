@@ -1,13 +1,17 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
-const GitIcon: React.FC<IconProps> = ({ height = "64", width = "64" }) => {
+const GitIcon: React.FC<IconProps> = ({
+  height = "64",
+  width = "64",
+  color = "currentColor",
+}) => {
   return (
     <svg
       width={width}
       height={height}
       viewBox="0 0 64 64"
-      fill="none"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

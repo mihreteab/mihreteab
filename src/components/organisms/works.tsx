@@ -1,9 +1,17 @@
 import Tag from "../atoms/tag";
 import WorkCard from "../molecuels/worKCard";
+import type { Work } from "@/libs/types";
 
-const Works = () => {
+type WorksProps = {
+  data: Work[];
+};
+
+const Works = ({ data }: WorksProps) => {
   return (
-    <div className="px-4 py-[64px] md:py-[96px] md:px-[80px]">
+    <div
+      id="works"
+      className="flex justify-center px-4 py-[64px] md:py-[96px] md:px-[80px]"
+    >
       <div className="flex flex-col gap-6 md:px-8 md:gap-[48px]">
         <div className="flex flex-col gap-4 items-center">
           <div className="flex justify-center">
@@ -13,9 +21,9 @@ const Works = () => {
             Some of the noteworthy projects I have built:
           </div>
         </div>
-        <WorkCard />
-        <WorkCard picRight={true} />
-        <WorkCard />
+        {data.map((work, index) => (
+          <WorkCard work={work} key={index} picRight={index % 2 === 1} />
+        ))}
       </div>
     </div>
   );

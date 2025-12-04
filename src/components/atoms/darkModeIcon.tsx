@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
 const DarkModeIcon: React.FC<IconProps> = ({ height = "24", width = "24" }) => {
   return (

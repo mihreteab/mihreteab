@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
 const CloseIcon: React.FC<IconProps> = ({ height = "36", width = "36" }) => {
   return (

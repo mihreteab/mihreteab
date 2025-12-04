@@ -18,7 +18,7 @@ import TypescriptIcon from "../atoms/typeScriptIcon";
 
 const Skills = () => {
   return (
-    <div className="py-[64px] px-4 md:px-[80px] md:py-[96px]">
+    <div id="skills" className="py-[64px] px-4 md:px-[80px] md:py-[96px]">
       <div className="flex flex-col gap-6 md:px-[32px] md:gap-[48px]">
         <div className="flex flex-col gap-4">
           <div className="flex justify-center">

@@ -1,5 +1,5 @@
 import React from "react";
-import { IconProps } from "@/libs";
+import { IconProps } from "@/libs/types";
 
 const UpworkIcon: React.FC<IconProps> = ({ height = "28", width = "102" }) => {
   return (
