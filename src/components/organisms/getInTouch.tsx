@@ -9,12 +9,16 @@ import PhoneIcon from "../atoms/phoneIcon";
 import Tag from "../atoms/tag";
 import XIcon from "../atoms/xIcon";
 import { HeroType } from "@/libs/types";
+import { toast } from "sonner";
 
 const GetInTouch = ({ data }: { data: HeroType }) => {
   const handleCopy = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
-    } catch {}
+      toast.success("Copied to clipboard!");
+    } catch {
+      toast.error("Failed to copy");
+    }
   };
 
   return (

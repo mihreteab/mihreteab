@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import { ThemeProvider } from "@/libs/themeProvider";
+import { Toaster } from "sonner";
 import "@/styles/globals.css";
 
 const outfit = Outfit({
@@ -28,7 +29,10 @@ export default function RootLayout({
         <link rel="manifest" href="/images/favicon.png" />
       </head>
       <body className={`${outfit.variable} antialiased`}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <Toaster richColors position="top-right" />
+        </ThemeProvider>
       </body>
     </html>
   );
