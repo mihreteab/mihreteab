@@ -15,8 +15,97 @@ import StorybookIcon from "../atoms/storybookIcon";
 import Tag from "../atoms/tag";
 import TailwindIcon from "../atoms/tailwindIcon";
 import TypescriptIcon from "../atoms/typeScriptIcon";
+import SkillWrapper from "../molecuels/skillWrapper";
 
 const Skills = () => {
+  const skills = [
+    {
+      name: "Javascript",
+      icon: <JavascriptIcon />,
+      link: "https://www.javascript.com/",
+    },
+    {
+      name: "Typescript",
+      icon: <TypescriptIcon />,
+      link: "https://www.typescriptlang.org/",
+    },
+    {
+      name: "React",
+      icon: <ReactIcon />,
+      link: "https://react.dev/",
+    },
+    {
+      name: "Next.js",
+      icon: <NextIcon />,
+      link: "https://nextjs.org/",
+    },
+    {
+      name: "Node.js",
+      icon: <NodeIcon />,
+      link: "https://nodejs.org/en",
+    },
+    {
+      name: "Express.js",
+      icon: <ExpressIcon />,
+      link: "https://expressjs.com/",
+    },
+    {
+      name: "Nest.js",
+      icon: <NestIcon />,
+      link: "https://nestjs.com/",
+    },
+    {
+      name: "Socket.io",
+      icon: <SocketIcon />,
+      link: "https://socket.io/",
+    },
+    {
+      name: "PostgreSQL",
+      icon: <PostgresqlIcon />,
+      link: "https://www.postgresql.org/",
+    },
+    {
+      name: "MongoDB",
+      icon: <MongodbIcon />,
+      link: "https://www.mongodb.com/",
+    },
+    {
+      name: "SassSass/Scss",
+      icon: <SassIcon />,
+      link: "https://sass-lang.com/",
+    },
+    {
+      name: "Sass/Scss",
+      icon: <SassIcon />,
+      link: "https://sass-lang.com/",
+    },
+    {
+      name: "Tailwindcss",
+      icon: <TailwindIcon />,
+      link: "https://tailwindcss.com/",
+    },
+    {
+      name: "Figma",
+      icon: <FigmaIcon />,
+      link: "https://www.figma.com/",
+    },
+    {
+      name: "Cypress",
+      icon: <CypressIcon />,
+      link: "https://www.cypress.io/",
+    },
+    {
+      name: "Storybook",
+      icon: <StorybookIcon />,
+      link: "https://storybook.js.org/",
+    },
+    {
+      name: "Git",
+      icon: <GitIcon />,
+      link: "https://git-scm.com/",
+    },
+  ];
+
   return (
     <div id="skills" className="py-[64px] px-4 md:px-[80px] md:py-[96px]">
       <div className="flex flex-col gap-6 md:px-[32px] md:gap-[48px]">
@@ -29,102 +118,9 @@ const Skills = () => {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-4 md:grid-cols-5 lg:grid-cols-8 text-secondary-foreground">
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <JavascriptIcon />
-            </div>
-            <div>Javascript</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <TypescriptIcon />
-            </div>
-            <div>Typescript</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <ReactIcon />
-            </div>
-            <div>React</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <NextIcon />
-            </div>
-            <div>Next.js</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <NodeIcon />
-            </div>
-            <div>Node.js</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <ExpressIcon />
-            </div>
-            <div>Express.js</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <NestIcon />
-            </div>
-            <div>Nest.js</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <SocketIcon />
-            </div>
-            <div>Socket.io</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <PostgresqlIcon />
-            </div>
-            <div>PostgreSQL</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <MongodbIcon />
-            </div>
-            <div>MongoDB</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <SassIcon />
-            </div>
-            <div>Sass/Scss</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <TailwindIcon />
-            </div>
-            <div>Tailwindcss</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <FigmaIcon />
-            </div>
-            <div>Figma</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <CypressIcon />
-            </div>
-            <div>Cypress</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <StorybookIcon />
-            </div>
-            <div>Storybook</div>
-          </div>
-          <div className="flex flex-col gap-2 items-center">
-            <div>
-              <GitIcon />
-            </div>
-            <div>Git</div>
-          </div>
+          {skills.map((skill, index) => (
+            <SkillWrapper skill={skill} key={index} />
+          ))}
         </div>
       </div>
     </div>

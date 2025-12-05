@@ -1,4 +1,6 @@
 "use client";
+import { toast } from "sonner";
+
 const DownloadButton = () => {
   const handleDownload = async () => {
     try {
@@ -11,6 +13,7 @@ const DownloadButton = () => {
       a.download = "Mihreteab-Demeke-2025.pdf";
       a.click();
       window.URL.revokeObjectURL(url);
+      toast.success("Sucessfull Downloaded. Please check download folder.");
     } catch (err) {
       console.error("Download failed:", err);
     }

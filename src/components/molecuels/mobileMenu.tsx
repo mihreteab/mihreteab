@@ -69,10 +69,7 @@ const MobileMenu = () => {
                 </Link>
               </div>
               <div className="flex flex-col p-4 gap-4">
-                <div className="flex justify-between items-center">
-                  <div>Switch Theme</div>
-                  <ThemeToggle />
-                </div>
+                <ThemeToggle />
                 <div>
                   {/* <button className="py-[6px] px-4 bg-foreground text-secondary-background rounded-[12px] w-full body2-medium">
                     Download CV

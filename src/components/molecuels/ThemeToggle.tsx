@@ -20,8 +20,9 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="flex justify-center p-[6px] rounded-[8px] h-[36px] w-[36px]"
+      className="flex justify-between md:justify-center p-[6px] rounded-[8px] h-[36px] w-full md:w-[36px] cursor-pointer"
     >
+      <span className="md:hidden">Switch Theme</span>
       {theme === "dark" ? <DarkModeIcon /> : <LightModeIcon />}
     </button>
   );

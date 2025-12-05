@@ -22,7 +22,7 @@ export default async function Home() {
       <Experience data={data.experiences} />
       <Works data={data.works} />
       <Testimonials data={data.testimonials} />
-      <GetInTouch />
+      <GetInTouch data={data.hero} />
       <Footer />
     </main>
   );
