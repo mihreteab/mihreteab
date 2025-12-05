@@ -1,3 +1,6 @@
+"use client";
+
+import Link from "next/link";
 import CopyIcon from "../atoms/copyIcon";
 import GithubIcon from "../atoms/githubIcon";
 import LinkedInIcon from "../atoms/linkedInIcon";
@@ -5,8 +8,15 @@ import MailIcon from "../atoms/mailIcon";
 import PhoneIcon from "../atoms/phoneIcon";
 import Tag from "../atoms/tag";
 import XIcon from "../atoms/xIcon";
+import { HeroType } from "@/libs/types";
 
-const GetInTouch = () => {
+const GetInTouch = ({ data }: { data: HeroType }) => {
+  const handleCopy = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {}
+  };
+
   return (
     <div
       id="contact"
@@ -23,24 +33,39 @@ const GetInTouch = () => {
         </div>
         <div>
           <div className="flex justify-center gap-4 items-center">
-            <button className="md:p-1.5">
+            <button
+              className="md:p-1.5 cursor-pointer"
+              onClick={() =>
+                (window.location.href =
+                  "mailto:mihreteabdemeke@gmail.com?subject=Let%27s%20Connect&body=Hi%20Mihreteab,%20I%20saw%20your%20portfolio...")
+              }
+            >
               <MailIcon className="md:h-8 md:w-8" />
             </button>
             <div className="heading-h2-semi-bold-tab md:heading-h2-semi-bold-desk text-foreground">
               mihreteabdemeke@gmail.com
             </div>
-            <button className="md:p-1.5">
+            <button
+              className="md:p-1.5 cursor-pointer"
+              onClick={() => handleCopy("mihreteabdemeke@gmail.com")}
+            >
               <CopyIcon className="md:h-8 md:w-8" />
             </button>
           </div>
           <div className="flex justify-center gap-4 items-center">
-            <button className="md:p-1.5">
+            <button
+              className="md:p-1.5 cursor-pointer"
+              onClick={() => (window.location.href = "tel:+251916353625")}
+            >
               <PhoneIcon className="md:h-8 md:w-8" />
             </button>
             <div className="heading-h2-semi-bold-tab md:heading-h2-semi-bold-desk text-foreground">
               +2519 1635 3625
             </div>
-            <button className="md:p-[6px]">
+            <button
+              className="md:p-[6px] cursor-pointer"
+              onClick={() => handleCopy("+2519 1635 3625")}
+            >
               <CopyIcon className="md:h-[32px] md:w-[32px]" />
             </button>
           </div>
@@ -49,15 +74,15 @@ const GetInTouch = () => {
           <div className="flex flex-col gap-2 items-center">
             <div className="">You may also find me on these platforms!</div>
             <div className="flex gap-4 justify-center">
-              <button>
+              <Link href={data.socials.github} target="_blank">
                 <GithubIcon />
-              </button>
-              <button>
+              </Link>
+              <Link href={data.socials.x} target="_blank">
                 <XIcon />
-              </button>
-              <button>
+              </Link>
+              <Link href={data.socials.linkedin} target="_blank">
                 <LinkedInIcon />
-              </button>
+              </Link>
             </div>
           </div>
         </div>

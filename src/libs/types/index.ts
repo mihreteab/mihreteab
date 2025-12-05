@@ -13,6 +13,12 @@ export type Work = {
   url: string;
 };
 
+export type Skill = {
+  name: string;
+  icon: React.ReactNode;
+  link: string;
+};
+
 export type Experience = {
   title: string;
   time: string;
