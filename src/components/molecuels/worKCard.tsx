@@ -12,7 +12,11 @@ export type WorkCardProps = {
 
 const WorkCard = ({ picRight, work }: WorkCardProps) => {
   return (
-    <div className="rounded-[12px] drop-shadow-md bg-[#ffffff] dark:bg-[#1F2937] md:flex">
+    <Link
+      href={work.url}
+      target="_blank"
+      className="rounded-[12px] drop-shadow-md bg-[#ffffff] dark:bg-[#1F2937] md:flex"
+    >
       <div
         className={cn(
           "bg-secondary-background dark:bg-[#374151] p-8 flex justify-center items-center border border-gray-100 dark:border-[#1F2937] md:p-[48px] flex-1 rounded-t-[12px] md:rounded-t-none md:rounded-l-[12px]",
@@ -40,16 +44,12 @@ const WorkCard = ({ picRight, work }: WorkCardProps) => {
           ))}
         </div>
         <div>
-          <Link
-            target="_blank"
-            href={work.url}
-            className="h-9 w-9 flex justify-center items-center text-secondary-foreground"
-          >
+          <div className="h-9 w-9 flex justify-center items-center text-secondary-foreground">
             <OpenIcon />
-          </Link>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

@@ -1,12 +1,22 @@
 import UpworkIcon from "../atoms/upworkIcon";
 import { Experience } from "@/libs/types";
+import WhyzeerIcon from "../atoms/whyzzerIcon";
+import Link from "next/link";
 
 const ExperienceCard = ({ experience }: { experience: Experience }) => {
   return (
-    <div className="p-8 rounded-[12px] bg-background dark:bg-[#1F2937] drop-shadow-md">
+    <Link
+      href={experience.link}
+      target="_blank"
+      className="p-8 rounded-[12px] bg-background dark:bg-[#1F2937] drop-shadow-md"
+    >
       <div className="flex flex-col gap-4 md:flex-row md:gap-[48px]">
-        <div>
-          <UpworkIcon />
+        <div className="md:w-[140px]">
+          {experience.companyLogo === "Whyzzer" ? (
+            <WhyzeerIcon />
+          ) : (
+            <UpworkIcon />
+          )}
         </div>
         <div className="md:order-last text-gray-700 dark:text-[#E5E7EB]">
           {experience.time}
@@ -29,7 +39,7 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

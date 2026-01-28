@@ -22,7 +22,9 @@ export type Skill = {
 export type Experience = {
   title: string;
   time: string;
+  link: string;
   activities: string[];
+  companyLogo?: React.ReactNode;
 };
 
 export type Testimonial = {

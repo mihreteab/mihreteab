@@ -29,6 +29,8 @@ export const portfolioData: PortfolioData = {
     {
       title: "Sr. Frontend Developer",
       time: "Nov 2021 - Present",
+      companyLogo: "Whyzzer",
+      link: "https://www.whyzzer.com/",
       activities: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -39,6 +41,18 @@ export const portfolioData: PortfolioData = {
     {
       title: "Sr. Frontend Developer",
       time: "Nov 2021 - Present",
+      link: "https://www.upwork.com/freelancers/~01d628ce78211b519d",
+      activities: [
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      ],
+    },
+    {
+      title: "Sr. Frontend Developer",
+      time: "Nov 2021 - Present",
+      link: "https://www.upwork.com/freelancers/~01d628ce78211b519d",
       activities: [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
