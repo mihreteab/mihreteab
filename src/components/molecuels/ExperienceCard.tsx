@@ -14,6 +14,8 @@ const ExperienceCard = ({ experience }: { experience: Experience }) => {
         <div className="md:w-[140px]">
           {experience.companyLogo === "Whyzzer" ? (
             <WhyzeerIcon />
+          ) : experience.companyLogo === "Whizkids" ? (
+            <div className="text-[32px]">Whizkids</div>
           ) : (
             <UpworkIcon />
           )}
