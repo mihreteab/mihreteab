@@ -13,6 +13,29 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Mihreteab Demeke",
   description: "Mihreteab Demeke Portifolio",
+  openGraph: {
+    title: "Mihreteab Demeke",
+    description: "Mihreteab Demeke Portifolio",
+    url:
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://mihreteab-demeke.vercel.app/",
+    siteName: "Mihreteab Demeke",
+    images: [
+      {
+        url: "/images/profile.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Mihreteab Demeke Portfolio preview",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mihreteab Demeke",
+    description: "Mihreteab Demeke Portifolio",
+    images: ["/images/profile.jpg"],
+  },
 };
 
 export default function RootLayout({
