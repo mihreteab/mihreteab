@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Mihreteab Demeke",
     images: [
       {
-        url: "/images/profile.jpg",
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://mihreteab-demeke.vercel.app"}/images/profile.jpg`,
         width: 1200,
         height: 630,
         alt: "Mihreteab Demeke Portfolio preview",
@@ -34,7 +34,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mihreteab Demeke",
     description: "Mihreteab Demeke Portifolio",
-    images: ["/images/profile.jpg"],
+    images: [
+      `${process.env.NEXT_PUBLIC_SITE_URL || "https://mihreteab-demeke.vercel.app"}/images/profile.jpg`,
+    ],
   },
 };
 
